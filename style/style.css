@@ -2,9 +2,12 @@
 
 /*기본설정*/
 
+
 body{
   background-color: rgb(21, 33, 56);
 }
+
+
 @media (orientation: landscape) {
     #promptTurn {
         display: block;
@@ -16,12 +19,18 @@ body{
         display: none;
     }
 }
+body{
+  margin:0;
+  padding:0;
+}
 
 #promptTurn{
-  position:sticky;
+  position:absolute;
   text-align:center;
-  min-height:100%;
+  height:100vh;
   min-width:100%;
+  top:0px;
+  bottom:0px;
   margin:0;
   padding:0;
   position:fixed;
