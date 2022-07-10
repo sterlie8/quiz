@@ -2,6 +2,17 @@
 
 /*기본설정*/
 
+@media (orientation: landscape) {
+    .turnPrompt {
+        display: block;
+    }
+}
+
+@media all and (orientation: portrait) {
+    .turnPrompt {
+        display: none;
+    }
+}
 
 
 main{
