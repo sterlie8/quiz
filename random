@@ -13,3 +13,46 @@ function testFunction() {
 };
 
 </script>
+
+
+
+css파일
+
+main{
+
+  width:0ph;
+  height: 30ph;
+  padding:0;
+
+  text-align: center;
+  background-color: rgb(21, 33, 56);
+  color:white;
+}
+
+main h1{
+  margin:3rem;
+}
+
+main p{
+  margin:2rem;
+}
+
+main button.start{
+  background-color:transparent;
+  border: 2px solid white;
+  border-radius:20px;
+  padding: 0.8rem 2rem;
+  color:white;
+
+}
+
+
+/*tablet : 768px 이상*/
+@media (min-width: 768px){
+  .title {font-size: 14px;}
+}
+
+/*laptop : 1020px 이상*/
+@media (min-width: 1020px){
+  .title {font-size: 14px;}
+}
