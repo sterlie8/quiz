@@ -3,13 +3,13 @@
 /*기본설정*/
 
 @media (orientation: landscape) {
-    .turnPrompt {
+    promptTurn {
         display: block;
     }
 }
 
 @media all and (orientation: portrait) {
-    .turnPrompt {
+    promptTurn {
         display: none;
     }
 }
