@@ -8,7 +8,7 @@
     }
 }
 
-@media all and (orientation: portrait) {
+@media (orientation: portrait) {
     #promptTurn {
         display: none;
     }
