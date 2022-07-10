@@ -1,7 +1,10 @@
 /*스크린 사이즈별 설정*/
 
 /*기본설정*/
-background-attachment: fixed;
+
+body{
+  background-color: rgb(21, 33, 56);
+}
 @media (orientation: landscape) {
     #promptTurn {
         display: block;
@@ -15,6 +18,7 @@ background-attachment: fixed;
 }
 
 #promptTurn{
+  position:sticky;
   text-align:center;
   min-height:100%;
   min-width:100%;
