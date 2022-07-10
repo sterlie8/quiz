@@ -1,0 +1,15 @@
+<p>hello</p>
+<script src="js.js"></script>
+<button onclick = "testFunction()">click</button>
+<p id="demo"></p>
+
+<script>
+///dictionaryy 만들기
+var dict = {};
+
+
+function testFunction() {
+  document.getElementById("demo").innerHTML = dict[a];
+};
+
+</script>
