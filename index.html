@@ -206,15 +206,17 @@
                        console.log(yloption);
 
                        var max = dict[0];
+                       var x = 0;
 
                        for (var i=0; i<dict.length; i++){
 
                          if(max < dict[i]) {
                            max = dict[i];
+                           i = x;
                          }
                        }
-                       console.log(max)
-                       $("#div_result").text('결과는 ' +max)
+                       console.log(x)
+                       $("#div_result").text('결과는 ' +x)
 
 
                    } );
