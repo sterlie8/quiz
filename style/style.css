@@ -10,7 +10,7 @@ body{
 
 @media (orientation: landscape) {
     #promptTurn {
-        display: block;
+        display: none;
     }
 }
 
@@ -19,24 +19,56 @@ body{
         display: none;
     }
 }
-body{
-  margin:0;
-  padding:0;
-}
+
 
 #promptTurn{
   position:absolute;
   text-align:center;
   height:100vh;
-  min-width:100%;
+  width:100%;
   top:0px;
   bottom:0px;
-  margin:0;
-  padding:0;
+  right:0px;
+  left:0px;
   position:fixed;
   font-size:3rem;
   background-color: rgb(21, 33, 56);
-  vertical-align:middle;
+
+
+}
+
+#startscreen{
+  position:fixed;
+  height:100vh;
+  width:100%;
+  top:0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+
+}
+
+#tabs{
+  overflow:hidden;
+  /*border:1px solid #ccc;*/
+  background-color: black;
+
+}
+
+
+#tabs li{
+  font-size:0.8rem;
+  color:white;
+  list-style: none;
+  background-color:transparent;
+  float:left;
+  border:2px solid #ccc;
+  outline:none;
+  cursor:pointer;
+  padding:14px 16px;
+  margin:10px;
+  transition:0.3s;
+  border-radius:15px;
 
 }
 
