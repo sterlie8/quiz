@@ -100,15 +100,3 @@ button{
 form{
   margin:20px;
 }
-
-
-
-/*tablet : 768px 이상*/
-@media (min-width: 768px){
-  .title {font-size: 14px;}
-}
-
-/*laptop : 1020px 이상*/
-@media (min-width: 1020px){
-  .title {font-size: 14px;}
-}
