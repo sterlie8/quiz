@@ -37,6 +37,8 @@ body{
 
 }
 
+
+
 #startscreen{
   position:fixed;
   height:100vh;
@@ -93,7 +95,7 @@ main p{
   margin:2rem;
 }
 
-main button.start{
+button{
   background-color:transparent;
   border: 2px solid white;
   border-radius:20px;
