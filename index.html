@@ -74,7 +74,7 @@
           <div class="radio"><label><input type="radio" name="optradio2" value="option2_4">4. 내가 일찍 도착했을 리가 없다.</label></div>
       </form>
       <input class = "btn btn-primary" type="button" id="btn_next2" data-dismiss="modal" value="다음">
-      <input class = "btn btn-primary" type="button" id="btn_before2" data-dismiss="modal" value="이전">
+
   </div>
 
   <div class="container" id="div_question3" hidden>
@@ -87,7 +87,7 @@
           <div class="radio"><label><input type="radio" name="optradio3" value="option3_4">4. 인사를 하지 않는다.</label></div>
       </form>
       <input class = "btn btn-primary" type="button" id="btn_next3" data-dismiss="modal" value="다음">
-      <input class = "btn btn-primary" type="button" id="btn_before3" data-dismiss="modal" value="이전">
+
   </div>
 
   <div class="container" id="div_question4" hidden>
@@ -100,7 +100,6 @@
           <div class="radio"><label><input type="radio" name="optradio4" value="option4_4">4. 이번 수학여행의 주인공은 나다.</label></div>
       </form>
       <input class = "btn btn-primary" type="button" id="btn_next4" data-dismiss="modal" value="다음">
-      <input class = "btn btn-primary" type="button" id="btn_before4" data-dismiss="modal" value="이전">
   </div>
 
   <div class="container" id="div_question5" hidden>
@@ -113,7 +112,6 @@
           <div class="radio"><label><input type="radio" name="optradio5" value="option5_4">4. 먹지 않는다.</label></div>
       </form>
       <input class = "btn btn-primary" type="button" id="btn_next5" data-dismiss="modal" value="다음">
-      <input class = "btn btn-primary" type="button" id="btn_before5" data-dismiss="modal" value="이전">
   </div>
 
   <div class="container" id="div_questionlast" hidden>
@@ -126,7 +124,7 @@
             <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_4">4. 마술</label></div>
           </form>
             <input class = "btn btn-primary" type="button" id="btn_next_last" data-dismiss="modal" value="결과를_보여주세요">
-            <input class = "btn btn-primary" type="button" id="btn_beforelast" data-dismiss="modal" value="이전">
+
   </div>
 
   <hr>
@@ -250,11 +248,7 @@
                        yfnext('option2', optvalue);
                    });
 
-                   $("#btn_before2").click(function() {
-                       console.log('Clicked btn_before2 !!!')
-                       $("#div_question2").hide()
-                       $("#div_question1").show()
-                   });
+
 
                    $("#btn_next3").click(function() {
                        console.log('Clicked btn_next3 !!!')
@@ -264,11 +258,7 @@
                        yfnext('option3', optvalue);
                    });
 
-                   $("#btn_before3").click(function() {
-                       console.log('Clicked btn_before3 !!!')
-                       $("#div_question3").hide()
-                       $("#div_question2").show()
-                   });
+
 
                    $("#btn_next4").click(function() {
                        console.log('Clicked btn_next4 !!!')
@@ -276,12 +266,6 @@
                        dict[ans[optvalue]]+=1;
                        console.log(dict)
                        yfnext('option4', optvalue);
-                   });
-
-                   $("#btn_before4").click(function() {
-                       console.log('Clicked btn_before4 !!!')
-                       $("#div_question4").hide()
-                       $("#div_question3").show()
                    });
 
                    $("#btn_next5").click(function() {
@@ -292,11 +276,6 @@
                        yfnext('option5', optvalue);
                    });
 
-                   $("#btn_before5").click(function() {
-                       console.log('Clicked btn_before5 !!!')
-                       $("#div_question5").hide()
-                       $("#div_question4").show()
-                   });
 
                    $("#btn_next_last").click(function() {
                        console.log('Clicked btn_next_last !!!')
