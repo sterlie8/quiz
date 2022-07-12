@@ -55,7 +55,7 @@ body{
 
 }
 
-#tabs{
+#tabs{ 
   overflow:hidden;
   /*border:1px solid #ccc;*/
   background-color: black;
