@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>POEM</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1" user-scaleable="no">
     <!-- 뷰포트를 디바이스 너비에 맞추어 지정, 줌인줌아웃불가 -->
     <link rel="stylesheet" type="text/css" href="style/style.css"/>
@@ -18,15 +21,10 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script>
-        $( function() {
-            $( "#tabs" ).tabs();
-        } );
-    </script>
 
   </head>
   <body>
-
+    <!--휴대폰 돌리기 화면-->
     <main id = "main">
       <div class="container">
 
@@ -44,88 +42,109 @@
         <h1><심리테스트 제목></h1>
         <img src="TitlePageImage.jpg" width=40% height=40%>
         <p>심리테스트에 대한 간단한 설명 몇줄<br>(내용 등)</p>
+        <script>
+            $(document).ready(function() {
+              $('#div_question1').hide();
+              $('#endScreen_0').hide();
+              $('#endScreen_1').hide();
+              $('#endScreen_2').hide();
+              $('#endScreen_3').hide();
+              $('#endScreen_4').hide();
+            });
+        </script>
         <button class="start" onclick="toggle1()">start</button>
       </div>
 
 
 
+
+
+
+
 <div class="container" id="tabs-1">
-  <h1>시인 추천 사이트 입니다. 총7문항의 문항을 선택하시면, 취향에 맞는 시인을 추천해 드립니다!</h1>
 
   <div class="container" id="div_question1">
       <h2>여름방학을 떠올렸을 때 가장 먼저 하고 싶은 것은?</h2>
-      <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
       <form>
         <div class="radio"><label><input type="radio" name="optradio1" value="option1_1">1. 공부</label></div>
           <div class="radio"><label><input type="radio" name="optradio1" value="option1_2">2. 여행</label></div>
           <div class="radio"><label><input type="radio" name="optradio1" value="option1_3">3. 운동</label></div>
           <div class="radio"><label><input type="radio" name="optradio1" value="option1_4">4. 휴식</label></div>
       </form>
-      <input class = "btn btn-primary" type="button" id="btn_next1" data-dismiss="modal" value="다음">
+      <input class = "btn-primary" type="button" id="btn_next1" data-dismiss="modal" value="다음">
   </div>
 
   <div class="container" id="div_question2" hidden>
       <h2>개학식 날이 밝았다. 학교에 생각보다 일찍 도착했는데 이 시간 동안 할 것은?</h2>
-      <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
       <form>
           <div class="radio"><label><input type="radio" name="optradio2" value="option2_1">1. 자가진단</label></div>
           <div class="radio"><label><input type="radio" name="optradio2" value="option2_2">2. 친구들과 인사하기</label></div>
           <div class="radio"><label><input type="radio" name="optradio2" value="option2_3">3. 창 밖을 바라보기</label></div>
           <div class="radio"><label><input type="radio" name="optradio2" value="option2_4">4. 내가 일찍 도착했을 리가 없다.</label></div>
       </form>
-      <input class = "btn btn-primary" type="button" id="btn_next2" data-dismiss="modal" value="다음">
+      <input class = "btn-primary" type="button" id="btn_next2" data-dismiss="modal" value="다음">
 
   </div>
 
   <div class="container" id="div_question3" hidden>
       <h2>선생님과의 면담날이다. 내가 건낼 인사말은?</h2>
-      <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
       <form>
           <div class="radio"><label><input type="radio" name="optradio3" value="option3_1">1. 보고싶었어요!</label></div>
           <div class="radio"><label><input type="radio" name="optradio3" value="option3_2">2. 선생님 더 예뻐지셨네요/ 잘생겨지셨어요.</label></div>
           <div class="radio"><label><input type="radio" name="optradio3" value="option3_3">3. 방학 동안 어떻게 지내셨어요?</label></div>
           <div class="radio"><label><input type="radio" name="optradio3" value="option3_4">4. 인사를 하지 않는다.</label></div>
       </form>
-      <input class = "btn btn-primary" type="button" id="btn_next3" data-dismiss="modal" value="다음">
+      <input class = "btn-primary" type="button" id="btn_next3" data-dismiss="modal" value="다음">
 
   </div>
 
   <div class="container" id="div_question4" hidden>
       <h2>수학여행 하루 전이다. 내일 어떤 옷을 입고 갈것인가? </h2>
-      <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
       <form>
           <div class="radio"><label><input type="radio" name="optradio4" value="option4_1">1. 교복</label></div>
           <div class="radio"><label><input type="radio" name="optradio4" value="option4_2">2. 가장 편한 옷</label></div>
           <div class="radio"><label><input type="radio" name="optradio4" value="option4_3">3. 친구의 추천을 받는다.</label></div>
           <div class="radio"><label><input type="radio" name="optradio4" value="option4_4">4. 이번 수학여행의 주인공은 나다.</label></div>
       </form>
-      <input class = "btn btn-primary" type="button" id="btn_next4" data-dismiss="modal" value="다음">
+      <input class = "btn-primary" type="button" id="btn_next4" data-dismiss="modal" value="다음">
   </div>
 
   <div class="container" id="div_question5" hidden>
       <h2>시험 날이다. 아침 식사로 내가 먹고갈 것은?</h2>
-      <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
       <form>
           <div class="radio"><label><input type="radio" name="optradio5" value="option5_1">1. 간단한 식사</label></div>
           <div class="radio"><label><input type="radio" name="optradio5" value="option5_2">2. 7첩 반상</label></div>
           <div class="radio"><label><input type="radio" name="optradio5" value="option5_3">3. 시험 잘보기 기원 떡</label></div>
           <div class="radio"><label><input type="radio" name="optradio5" value="option5_4">4. 먹지 않는다.</label></div>
       </form>
-      <input class = "btn btn-primary" type="button" id="btn_next5" data-dismiss="modal" value="다음">
+      <input class = "btn-primary" type="button" id="btn_next5" data-dismiss="modal" value="다음">
   </div>
 
   <div class="container" id="div_questionlast" hidden>
         <h2>축제날이다. 무대를 하나 해야하는데 내가 할 무대는?</h2>
-        <p>아래 3개중 본인의 취향에 맞는 문항을 선택하고 다음을 클릭하세요</p>
+
           <form>
             <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_1">1. 댄스 공연</label></div>
             <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_2">2. 무술</label></div>
-            <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_3">3. 트로트/노래 공연</label></div>
+            <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_3">3. 노래 공연</label></div>
             <div class="radio"><label><input type="radio" name="optradiolast" value="optionlast_4">4. 마술</label></div>
           </form>
-            <input class = "btn btn-primary" type="button" id="btn_next_last" data-dismiss="modal" value="결과를_보여주세요">
+            <input class = "btn-primary" type="button" id="btn_next_last" data-dismiss="modal" value="결과를_보여주세요">
 
   </div>
+
+  <script>
+     function toggle1() {
+       $("#startScreen").hide()
+       $("#div_question1").show()
+     }
+   </script>
+
 
   <hr>
   <div id="div_result">결과는 ?</div>
@@ -137,162 +156,228 @@
 </div><!--end of container-->
 
 
-       <script>
+  <script>
 
-       function toggle1() {
-         $("#startScreen").hide()
-         $("#tabs-1").show()
-       }
-
-
-       </script>
+  function toggle1() {
+   $("#startScreen").hide()
+   $("#div_question1").show()
+  }
 
 
-      <script>
-               // 공용변수
-               yloption = [];  // javascript 배열 https://app-dev.tistory.com/41
-               dict = [0,0,0,0];
-               ans = {
-                 option1_1:[0,1],
-                 option1_2:[1],
-                 option1_3:[2],
-                 option1_4:[3],
-                 option2_1:[0],
-                 option2_2:[1],
-                 option2_3:[2],
-                 option2_4:[3],
-                 option3_1:[0],
-                 option3_2:[1],
-                 option3_3:[2],
-                 option3_4:[3],
-                 option4_1:[0],
-                 option4_2:[1],
-                 option4_3:[2],
-                 option4_4:[3],
-                 option5_1:[0],
-                 option5_2:[1],
-                 option5_3:[2],
-                 option5_4:[3],
-                 optionlast_1:[0],
-                 optionlast_2:[1],
-                 optionlast_3:[2],
-                 optionlast_4:[3]
-               }
-               function score(x){
-                 for (var i = 0; i<x.length; i++){
-                   dict[i]+=1;
-                 }
+  </script>
+  <div class="container" id="endScreen_0">
+     <h1><심리테스트 결과></h1>
+     <img src="TitlePageImage.jpg" width=40% height=40%>
+     <p>당신에게 0번 시인을 추천합니다! </p>
+   </div>
 
-               }
+   <div class="container" id="endScreen_1">
+     <h1><심리테스트 결과></h1>
+     <img src="TitlePageImage.jpg" width=40% height=40%>
+     <p>당신에게 000 시인을 추천합니다!</p>
+   </div>
 
-               function yfnext(opt, val) {
-                  console.log('opt val : ' + opt + ' , ' + val);
-                   // 단순히 빈문자열( ' ' ), null 값, 정의되지 않은 값(undefined)
-                   if( val == "" || val == null || val == undefined || ( val != null && typeof val == "object" && !Object.keys(val).length ) ){
-                       alert("아무것도 선택되지 않았습니다! 선택후 '다음'을 클릭하세요!");
-                   } else {
-                       console.log(yloption);
-                       if (opt == 'option1') {
-                           yloption[0] = val;
-                           $("#div_question1").hide()
-                           $("#div_question2").show()
-                       } else if (opt == 'option2') {
-                           yloption[1] = val;
-                           $("#div_question2").hide()
-                           // $("#div_question3").show()
-                           $("#div_question3").show()
-                       } else if (opt == 'option3') {
-                          yloption[2] = val;
-                          $("#div_question3").hide()
-                          $("#div_question4").show()
-                        } else if (opt == 'option4') {
-                           yloption[3] = val;
-                           $("#div_question4").hide()
-                           $("#div_question5").show()
-                         } else if (opt == 'option5') {
-                            yloption[4] = val;
-                            $("#div_question5").hide()
-                            $("#div_questionlast").show()
-                       }  else if (opt == 'optionlast') {
-                           yloption[5] = val;
-                           $("#div_questionlast").hide()
-                       }
+   <div class="container" id="endScreen_2">
+     <h1><심리테스트 결과></h1>
+     <img src="TitlePageImage.jpg" width=40% height=40%>
+     <p>당신에게 000 시인을 추천합니다!</p>
+   </div>
+
+   <div class="container" id="endScreen_3">
+     <h1><심리테스트 결과></h1>
+     <img src="TitlePageImage.jpg" width=40% height=40%>
+     <p>당신에게 000 시인을 추천합니다!</p>
+   </div>
+
+
+  <script>
+           // 공용변수
+           yloption = [];  // javascript 배열 https://app-dev.tistory.com/41
+           dict = [0,0,0,0,0,0,0,0,0,0,0,0];
+           //index
+           //0 윤동주
+           //1 이상
+           //2 이항복
+           //3 김지하
+           //4 정극인
+           //5 윤선도
+           //6 황진이
+           //7 정철
+           //8 황동규
+           //9 박목월
+           //10 조위
+           //11 양태사
+           ans = {
+             option1_1:[0,1,2],
+             option1_2:[3,4,5],
+             option1_3:[6,7,8],
+             option1_4:[9,10,11],
+             option2_1:[6,8,2],
+             option2_2:[3,7,11],
+             option2_3:[4,5,9],
+             option2_4:[1,10,0],
+             option3_1:[2,11,8],
+             option3_2:[7,1,6],
+             option3_3:[5,0,9],
+             option3_4:[3,4,10],
+             option4_1:[2,11,9],
+             option4_2:[3,5,10],
+             option4_3:[0,7,6],
+             option4_4:[1,4,8],
+             option5_1:[8,5,11],
+             option5_2:[1,6,0],
+             option5_3:[7,9,3],
+             option5_4:[4,2,10],
+             optionlast_1:[4,7,6],
+             optionlast_2:[10,5,0],
+             optionlast_3:[8,11,9],
+             optionlast_4:[3,1,2]
+           }
+           function score(x){
+             for (var i = 0; i<x.length; i++){
+               dict[x[i]]+=1;
+             }
+
+           }
+
+           function yfnext(opt, val) {
+              console.log('opt val : ' + opt + ' , ' + val);
+               // 단순히 빈문자열( ' ' ), null 값, 정의되지 않은 값(undefined)
+               if( val == "" || val == null || val == undefined || ( val != null && typeof val == "object" && !Object.keys(val).length ) ){
+                   alert("아무것도 선택되지 않았습니다! 선택후 '다음'을 클릭하세요!");
+               } else {
+                   console.log(yloption);
+                   if (opt == 'option1') {
+                       yloption[0] = val;
+                       $("#div_question1").hide()
+                       $("#div_question2").show()
+                   } else if (opt == 'option2') {
+                       yloption[1] = val;
+                       $("#div_question2").hide()
+                       // $("#div_question3").show()
+                       $("#div_question3").show()
+                   } else if (opt == 'option3') {
+                      yloption[2] = val;
+                      $("#div_question3").hide()
+                      $("#div_question4").show()
+                    } else if (opt == 'option4') {
+                       yloption[3] = val;
+                       $("#div_question4").hide()
+                       $("#div_question5").show()
+                     } else if (opt == 'option5') {
+                        yloption[4] = val;
+                        $("#div_question5").hide()
+                        $("#div_questionlast").show()
+                   }  else if (opt == 'optionlast') {
+                       yloption[5] = val;
+                       $("#div_questionlast").hide()
+                       $("#div_questionlast").hide()
+                       $("#endScreen_0").hide()
+                       $("#endScreen_1").hide()
+                       $("#endScreen_2").hide()
+                       $("#endScreen_3").hide()
+                       $("#endScreen_4").hide()
+
                    }
                }
-               $(document).ready(function() {
+           }
+           $(document).ready(function() {
 
-                   $("#btn_next1").click(function() {
-                       console.log('Clicked btn_next1 !!!')
-                       var optvalue = $("input[name='optradio1']:checked").val();
-                       score(ans[optvalue])
-                       console.log(dict)
-                       yfnext('option1', optvalue);
-                   });
+               $("#btn_next1").click(function() {
+                   console.log('Clicked btn_next1 !!!')
+                   var optvalue = $("input[name='optradio1']:checked").val();
+                   yfnext('option1', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
 
-                   $("#btn_next2").click(function() {
-                       console.log('Clicked btn_next2 !!!')
-                       var optvalue = $("input[name='optradio2']:checked").val();
-                       dict[ans[optvalue]]+=1;
-                       console.log(dict)
-                       yfnext('option2', optvalue);
-                   });
+               });
 
-
-
-                   $("#btn_next3").click(function() {
-                       console.log('Clicked btn_next3 !!!')
-                       var optvalue = $("input[name='optradio3']:checked").val();
-                       dict[ans[optvalue]]+=1;
-                       console.log(dict)
-                       yfnext('option3', optvalue);
-                   });
+               $("#btn_next2").click(function() {
+                   console.log('Clicked btn_next2 !!!')
+                   var optvalue = $("input[name='optradio2']:checked").val();
+                   yfnext('option2', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
+               });
 
 
 
-                   $("#btn_next4").click(function() {
-                       console.log('Clicked btn_next4 !!!')
-                       var optvalue = $("input[name='optradio4']:checked").val();
-                       dict[ans[optvalue]]+=1;
-                       console.log(dict)
-                       yfnext('option4', optvalue);
-                   });
+               $("#btn_next3").click(function() {
+                   console.log('Clicked btn_next3 !!!')
+                   var optvalue = $("input[name='optradio3']:checked").val();
+                   yfnext('option3', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
 
-                   $("#btn_next5").click(function() {
-                       console.log('Clicked btn_next5 !!!')
-                       var optvalue = $("input[name='optradio5']:checked").val();
-                       dict[ans[optvalue]]+=1;
-                       console.log(dict)
-                       yfnext('option5', optvalue);
-                   });
+               });
 
 
-                   $("#btn_next_last").click(function() {
-                       console.log('Clicked btn_next_last !!!')
-                       $("#div_result").text('결과는 ???')
-                       var optvalue = $("input[name='optradiolast']:checked").val();
-                       dict[ans[optvalue]]+=1;
-                       console.log(dict)
-                       yfnext('optionlast', optvalue);
-                       console.log(yloption);
 
-                       var max = dict[0];
-                       var x = 0;
+               $("#btn_next4").click(function() {
+                   console.log('Clicked btn_next4 !!!')
+                   var optvalue = $("input[name='optradio4']:checked").val();
+                   yfnext('option4', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
 
-                       for (var i=0; i<dict.length; i++){
+               });
 
-                         if(max < dict[i]) {
-                           max = dict[i];
-                           x = i;
-                         }
-                       }
-                       console.log(x)
-                       $("#div_result").text('결과는 ' + x)
+               $("#btn_next5").click(function() {
+                   console.log('Clicked btn_next5 !!!')
+                   var optvalue = $("input[name='optradio5']:checked").val();
+                   yfnext('option5', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
+
+               });
 
 
-                   } );
-                 });
-<!-- -->
-          </script>
+               $("#btn_next_last").click(function() {
+                   console.log('Clicked btn_next_last !!!')
+                   $("#div_result").text('결과는 ???')
+                   var optvalue = $("input[name='optradiolast']:checked").val();
+                   yfnext('optionlast', optvalue);
+                   score(ans[optvalue]);
+                   console.log(dict)
+
+                   console.log(yloption);
+
+                   var max = dict[0];
+                   var x = 0;
+
+                   for (var i=0; i<dict.length; i++){
+
+                     if(max < dict[i]) {
+                       max = dict[i];
+                       x = i;
+                     }
+                   }
+                   console.log(x)
+                   $("#div_result").text('결과는 ' + x)
+
+                   if (x == 0) {
+                     $("#endScreen_0").show()
+                   }
+
+                   if (x == 1) {
+                     $("#endScreen_1").show()
+                   }
+
+                   if (x == 2) {
+                     $("#endScreen_2").show()
+                   }
+
+                   if (x == 3) {
+                     $("#endScreen_3").show()
+                   }
+
+
+
+
+               } );
+             });
+  <!-- -->
+      </script>
 
 
 
