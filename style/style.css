@@ -55,33 +55,6 @@ body{
 
 }
 
-#tabs{ 
-  overflow:hidden;
-  /*border:1px solid #ccc;*/
-  background-color: black;
-
-}
-
-#tabs_1 h2{
-  margin:40px;
-}
-
-#tabs li{
-  font-size:0.8rem;
-  color:white;
-  list-style: none;
-  background-color:transparent;
-  float:left;
-  border:2px solid #ccc;
-  outline:none;
-  cursor:pointer;
-  padding:14px 16px;
-  margin:10px;
-  transition:0.3s;
-  border-radius:15px;
-
-}
-
 .radio{
   margin:5px;
 }
